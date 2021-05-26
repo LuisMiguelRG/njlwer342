@@ -3,9 +3,15 @@ import React, { Component } from 'react';
 /// Modifica el componente para que se puedan agregar tareas
 
 class App extends Component {
-  state{
-    String: "",
+  state={
+    String: '',
     task: ['Sacar la ropa', 'Hacer la cama','Leer un rato']
+  }
+
+  handleChange(e){
+    this.setState({
+      String: e.target.value
+    })    
   }
 
   onsubmit(e) {
